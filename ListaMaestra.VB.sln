@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ListaMaestra.VB.Api", "ListaMaestra.VB.Api\ListaMaestra.VB.Api.vbproj", "{DCB43586-2243-493D-A9E8-5A696882A830}"
 EndProject
@@ -14,6 +14,14 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ListaMaestra.VB.Negocio", "ListaMaestra.VB.Negocio\ListaMaestra.VB.Negocio.vbproj", "{AF9A6CFD-7495-45E7-B3BA-7AE423C195CB}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ListaMaestra.VB.Negocio.UnitTests", "ListaMaestra.VB.Negocio.UnitTests\ListaMaestra.VB.Negocio.UnitTests.vbproj", "{4E83E001-2194-4BA5-98DF-0470BDDB15F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specs", "Specs", "{89C5B93F-AD94-47C5-839F-7E034CB1BA36}"
+	ProjectSection(SolutionItems) = preProject
+		Specs\Agregar un proyecto.xlsx = Specs\Agregar un proyecto.xlsx
+		Specs\Agregar una historia.xlsx = Specs\Agregar una historia.xlsx
+		Specs\Consultar avance - UI y API.pptx = Specs\Consultar avance - UI y API.pptx
+		Specs\Consultar avance.xlsx = Specs\Consultar avance.xlsx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
