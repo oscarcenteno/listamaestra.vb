@@ -1,6 +1,4 @@
-﻿Imports ListaMaestra.VB.Negocio.ConsultarAvance
-
-Namespace ConsultarAvance
+﻿Namespace ConsultarAvance
     Friend Class DatosPersistentes
         Inherits DatosAbstractos
 

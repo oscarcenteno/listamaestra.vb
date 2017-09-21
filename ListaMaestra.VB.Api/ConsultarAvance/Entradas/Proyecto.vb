@@ -1,6 +1,4 @@
-﻿Imports ListaMaestra.VB.Negocio.ConsultarAvance
-
-Namespace ConsultarAvance
+﻿Namespace ConsultarAvance
     Public Class Proyecto
         Public Property Nombre As String
         Public Property Historias As IEnumerable(Of Historia)

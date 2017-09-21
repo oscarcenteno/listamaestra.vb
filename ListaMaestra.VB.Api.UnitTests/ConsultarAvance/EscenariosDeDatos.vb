@@ -1,5 +1,4 @@
 ﻿Imports ListaMaestra.VB.Api.ConsultarAvance
-Imports ListaMaestra.VB.Negocio.ConsultarAvance
 
 Namespace ConsultarAvance
     ' ¿Cómo reducir la duplicación en las pruebas unitarias?

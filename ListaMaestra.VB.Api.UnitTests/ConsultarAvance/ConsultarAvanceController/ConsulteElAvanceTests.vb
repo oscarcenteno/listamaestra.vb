@@ -1,5 +1,4 @@
 ﻿Imports NSubstitute
-Imports ListaMaestra.VB.Negocio.ConsultarAvance
 Imports ListaMaestra.VB.Api.ConsultarAvance
 Imports System.Web.Http.Results
 
