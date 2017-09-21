@@ -1,6 +1,4 @@
-﻿Imports System.Net
-Imports System.Net.Http
-Imports System.Web.Http
+﻿Imports System.Web.Http
 Imports ListaMaestra.VB.Negocio.AgregarProyecto
 
 Namespace AgregarProyecto
@@ -9,38 +7,34 @@ Namespace AgregarProyecto
 
         Private datos As DatosAbstractos
 
+        Public Sub New()
+            datos = New DatosPersistentes()
+        End Sub
+
         Public Sub New(datos As DatosAbstractos)
             Me.datos = datos
         End Sub
 
-
-        <Route("api/proyectos")>
-        <HttpGet>
-        Public Function ObtengaLosProyectos() As IHttpActionResult
-            Return Ok({"1", "2"})
-        End Function
-
+        ' Para probar este método debemos asegurar que:
+        ' 1. Se ejecute las validaciones, de manera que se requiere de una prueba donde una validación falle
+        ' 2. Se envíe a guardar, de manera que se requiere que una prueba verifique el llamado
+        ' 3. Se retorne el proyecto creado
         <Route("api/proyectos")>
         <HttpPost>
         Public Function AgregueUnProyecto(nuevoProyecto As NuevoProyecto) As IHttpActionResult
             Dim response As IHttpActionResult
 
             Try
-                datos.NuevoProyecto = nuevoProyecto
-                Dim proyectoCreado = CreacionDelProyecto.Ejecute(datos)
+                Validaciones.Valide(nuevoProyecto)
+                datos.Guarde(nuevoProyecto)
 
-                response = Ok(proyectoCreado)
+                response = Ok(nuevoProyecto)
             Catch exception As ArgumentException
-                response = BadRequest(exception.Message)
+                Dim mensaje = exception.Message
+                response = BadRequest(mensaje)
             End Try
 
             Return response
-        End Function
-
-        <Route("api/error")>
-        <HttpGet>
-        Public Function ObtengaError() As IHttpActionResult
-            Return BadRequest("El nombre es requerido")
         End Function
     End Class
 End Namespace

@@ -110,8 +110,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarProyecto\Entradas\DatosAbstractos.vb" />
+    <Compile Include="AgregarProyecto\Entradas\NuevoProyecto.vb" />
+    <Compile Include="AgregarProyecto\Validaciones.vb" />
+    <Compile Include="ConsultarAvance\ConsultarAvanceController.vb" />
+    <Compile Include="ConsultarAvance\Entradas\DatosAbstractos.vb" />
+    <Compile Include="ConsultarAvance\Entradas\DatosPersistentes.vb" />
+    <Compile Include="AgregarProyecto\Entradas\DatosPersistentes.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
     <Compile Include="AgregarProyecto\AgregarProyectoController.vb" />
+    <Compile Include="ConsultarAvance\Entradas\Historia.vb" />
+    <Compile Include="ConsultarAvance\Entradas\Iteracion.vb" />
+    <Compile Include="ConsultarAvance\Entradas\Proyecto.vb" />
+    <Compile Include="ConsultarAvance\LogicaDeNegocio\GeneracionDeLaListaDeResumenes.vb" />
+    <Compile Include="ConsultarAvance\LogicaDeNegocio\GeneracionDelResumenDeAvance.vb" />
+    <Compile Include="ConsultarAvance\LogicaDeNegocio\GeneracionDeResumenDeUnaIteracion.vb" />
+    <Compile Include="ConsultarAvance\LogicaDeNegocio\Reglas de negocio\CalculoDeLosPuntosEnElAlcance.vb" />
+    <Compile Include="ConsultarAvance\Salidas\ResumenDeAvance.vb" />
+    <Compile Include="ConsultarAvance\Salidas\ResumenDeIteracion.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -144,6 +160,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ConsultarAvance\Salidas\Salidas.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -162,13 +179,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AgregarProyecto\AccesoADatos\" />
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ListaMaestra.VB.Negocio\ListaMaestra.VB.Negocio.vbproj">
-      <Project>{af9a6cfd-7495-45e7-b3ba-7ae423c195cb}</Project>
-      <Name>ListaMaestra.VB.Negocio</Name>
-    </ProjectReference>
+    <Folder Include="ConsultarAvance\AccesoADatos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
