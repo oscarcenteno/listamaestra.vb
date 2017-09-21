@@ -1,5 +1,4 @@
 ﻿Imports System.Web.Http
-Imports ListaMaestra.VB.Negocio.AgregarProyecto
 
 Namespace AgregarProyecto
     Public Class AgregarProyectoController

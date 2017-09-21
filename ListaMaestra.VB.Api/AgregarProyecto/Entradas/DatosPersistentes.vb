@@ -1,6 +1,4 @@
-﻿Imports ListaMaestra.VB.Negocio.AgregarProyecto
-
-Namespace AgregarProyecto
+﻿Namespace AgregarProyecto
     Friend Class DatosPersistentes
         Inherits DatosAbstractos
 
